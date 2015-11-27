@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cn.pedant.sweetalert" version="1.0.0"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>SweetAlertDialog</name>
+
+  <js-module name="SweetAlertDialog" src="www/SweetAlertDialog.js">
+    <clobbers target="window.plugins.SweetAlertDialogPlugin" />
+  </js-module><platform name="android">
+
+  <config-file parent="/*" target="res/xml/config.xml">
+    <feature name="SweetAlertDialogPlugin">
+      <param name="android-package" value="cn.pedant.sweetalert.SweetAlertDialogPlugin" />
+    </feature>
+  </config-file>
+
+  <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+
+  <source-file src="src/android/SweetAlertDialogPlugin.java" target-dir="src/cn/pedant/sweetalert" />
+  <source-file src="src/android/OptAnimationLoader.java" target-dir="src/cn/pedant/sweetalert" />
+  <source-file src="src/android/Rotate3dAnimation.java" target-dir="src/cn/pedant/sweetalert" />
+  <source-file src="src/android/SuccessTickView.java" target-dir="src/cn/pedant/sweetalert" />
+  <source-file src="src/android/SweetAlertDialog.java" target-dir="src/cn/pedant/sweetalert" />
+
+  <source-file src="src/android/anim/dialog_scale_in.xml" target-dir="res/anim" />
+  <source-file src="src/android/anim/dialog_scale_out.xml" target-dir="res/anim" />
+  <source-file src="src/android/anim/error_frame_in.xml" target-dir="res/anim" />
+  <source-file src="src/android/anim/error_x_in.xml" target-dir="res/anim" />
+  <source-file src="src/android/anim/success_bow_roate.xml" target-dir="res/anim" />
+  <source-file src="src/android/anim/success_mask_layout.xml" target-dir="res/anim" />
+
+  <source-file src="src/android/drawable/blue_button_background.xml" target-dir="res/drawable" />
+  <source-file src="src/android/drawable/custom_img.jpg" target-dir="res/drawable" />
+  <source-file src="src/android/drawable/dialog_background.xml" target-dir="res/drawable" />
+  <source-file src="src/android/drawable/error_center_x.xml" target-dir="res/drawable" />
+  <source-file src="src/android/drawable/error_circle.xml" target-dir="res/drawable" />
+  <source-file src="src/android/drawable/gray_button_background.xml" target-dir="res/drawable" />
+  <source-file src="src/android/drawable/red_button_background.xml" target-dir="res/drawable" />
+  <source-file src="src/android/drawable/success_bow.xml" target-dir="res/drawable" />
+  <source-file src="src/android/drawable/success_circle.xml" target-dir="res/drawable" />
+  <source-file src="src/android/drawable/warning_circle.xml" target-dir="res/drawable" />
+  <source-file src="src/android/drawable/warning_sigh.xml" target-dir="res/drawable" />
+
+  <source-file src="src/android/values/alert_strings.xml" target-dir="res/values" />
+  <source-file src="src/android/values/alert_styles.xml" target-dir="res/values" />
+  <source-file src="src/android/values/attrs.xml" target-dir="res/values" />
+  <source-file src="src/android/values/alert_colors.xml" target-dir="res/values" />
+
+  <source-file src="src/android/layout/alert_dialog.xml" target-dir="res/layout" />
+
+
+</platform>
+</plugin>
